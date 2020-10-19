@@ -9,13 +9,17 @@ export class ErrorHandler extends Error {
   }
 }
 
-export const handlerError = (err: ErrorHandler, req: Request, res: Response): void => {
-  const {statusCode, message} = err;
+export const handlerError = (
+  err: ErrorHandler,
+  req: Request,
+  res: Response
+): void => {
+  const { statusCode, message } = err;
   const errors = validationResult(req);
   res.status(statusCode).json({
     status: err.name,
-    statusCode, 
+    statusCode,
     message,
-    errors: !errors.isEmpty()? errors.array(): null
-  })
-}
+    errors: !errors.isEmpty() ? errors.array() : null,
+  });
+};

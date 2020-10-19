@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import bodyParser from "body-parser";
 import helmet from "helmet";
-import routes from './routes';
+import routes from "./routes";
 
 const app = express();
 
