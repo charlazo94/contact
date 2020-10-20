@@ -4,8 +4,8 @@ import jwt from "jsonwebtoken";
 import config from "config";
 import { ErrorHandler, handlerError } from "../error";
 import User from "../models/user";
-import bodyValidatior from "../midlewares/auth/auth.validator";
-import validationsHandler from "../midlewares/validator";
+import bodyValidatior from "../middlewares/validators/auth/auth.validator";
+import validationsHandler from "../middlewares/validator";
 const router = Router();
 
 router.post(
